@@ -1,0 +1,36 @@
+{
+   "name": "ts3board",
+   "description": "A simple and intuitive soundboard for controlling a TeamSpeak 3 Music Bot.",
+   "version": "1.0.0",
+   "license": "Apache-2.0",
+   "author": "Nick Robson",
+   "engines": {
+      "node": "^5.1.1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com/nickrobson/ts3board.git"
+   },
+   "scripts": {
+      "test": "mocha",
+      "start": "(coffee -c -o dist src); node ./dist/server.js"
+   },
+   "contributors": [
+      "Nick Robson"
+   ],
+   "bugs": {
+      "url": "https://github.com/nickrobson/ts3board/issues"
+   },
+   "homepage": "https://github.com/nickrobson/ts3board#readme",
+   "devDependencies": {
+      "coffee-script": "^1.10.0",
+      "mocha": "^2.3.4",
+      "should": "^7.1.1"
+   },
+   "dependencies": {
+      "express": "^4.14.0",
+      "pug": "^2.0.0-beta3",
+      "passport": "^0.3.2",
+      "passport-http": "^0.3.0"
+   }
+}

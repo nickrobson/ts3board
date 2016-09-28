@@ -1,0 +1,85 @@
+doctype html
+html(lang='en')
+    head
+        title ts3board
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+        link(rel='icon', type='image/png', href='../favicon.png')
+
+        link(rel='stylesheet', href='//fonts.googleapis.com/icon?family=Material+Icons')
+        link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Dosis:500|Oswald|Titillium+Web:600')
+        link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/css/materialize.min.css')
+        link(rel='stylesheet', href='css/style.css')
+    body
+        .navbar-fixed
+            nav
+                div.nav-wrapper.row.red(style={'height': '65px'})
+                    div.left.s6.m4.l4(style={'margin-left': '2%'})
+                        span.breadcrumb ts3board
+                        span.breadcrumb#playing
+                    ul#buttons.right.s6.m8.l8
+                        li.center(style={'width': '50px'})
+                            span#users ' 0 '
+                        li.center(style={'width': '50px'})
+                            span#shuffle
+                                i.material-icons.small shuffle
+                        li.center(style={'width': '50px'})
+                            span#skipleft
+                                i.material-icons.small skip_previous
+                        li.center(style={'width': '50px'})
+                            span#skipright
+                                i.material-icons.small skip_next
+                        li.center(style={'width': '50px'})
+                            span#stop
+                                i.material-icons.small stop
+                        li.center(style={'width': '50px'})
+                            span#clear
+                                i.material-icons.small delete
+                        li.center(style={'width': '50px'})
+                            span#restart
+                                i.material-icons.small refresh
+                        li.center(style={'width': '50px', 'margin-right': '15px'})
+                            span#logout
+                                i.material-icons.small power_settings_new
+        .container
+            .row
+                div(style={height: '20px'})
+                form(action='#')
+                    p.range-field
+                        input#volslider(type='range', min='0', max='100')
+            .row
+                .col.s6.m6.l6
+                    h2#trackshead Tracks
+                    div
+                        ul#tracks.tracks
+                .col.s6.m6.l6
+                    h2 Playlist
+                    div(style={height: '82px'})
+                    div
+                        ul#playlist.tracks
+        .menu
+            ul
+                a(href='#')
+                    li Menu 1
+                a(href='#')
+                    li Menu 2
+                a(href='#')
+                    li Menu 3
+                a(href='#')
+                    li Menu 4
+        script(src='//code.jquery.com/jquery-2.1.4.min.js')
+        script(src='//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/js/materialize.min.js')
+        script(src='//cdn.socket.io/socket.io-1.2.0.js')
+        script(src='js/script.js')
+    footer.page-footer(style={'bottom': '0px', 'height': '155px'})
+        .container
+            .row
+                .col.offset-s1.offset-m1.offset-l1
+                    a.white-text(href='ts3server://27.50.70.178?port=10194') Join the TeamSpeak server!
+            .row
+                .col.offset-s1.offset-m1.offset-l1
+                    a.white-text(href='http://github.com/nickrobson/ts3board') View it on GitHub!
+        .footer-copyright
+            .container
+                p © 2014-2016 Nick Robson. All rights reserved.

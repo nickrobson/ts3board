@@ -1,0 +1,73 @@
+#buttons li a {
+    width: 30px;
+}
+#buttons li a i {
+    font-size: 25px;
+}
+
+.tracks {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tracks li {
+    list-style: none;
+    margin: 0px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #eeeeee;
+    overflow: hidden;
+}
+
+.tracks li:first-child {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tracks li:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.tracks li:first-child:last-child {
+    border-radius: 10px 10px 10px 10px;
+}
+
+.tracks li:nth-child(odd) {
+    background-color: #e0e0e0;
+}
+
+.tracks li:hover {
+    background-color: #eee;
+}
+
+.menu {
+    width: 100px;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    z-index: 999999;
+    display: none;
+    box-shadow: 0 0 10px #713C3C;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul a {
+    text-decoration: none;
+}
+
+.menu ul li {
+    width: 88%;
+    padding: 6%;
+    background-color: #F04D44;
+    color: #fff;
+}
+
+.menu ul li:hover {
+    background-color: #F7BA4B;
+    color: #444343;
+}
